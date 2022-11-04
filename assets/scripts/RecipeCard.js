@@ -8,7 +8,7 @@ class RecipeCard extends HTMLElement {
     
     let shadowEl = this.attachShadow({mode: 'open'});  // A1: create a shadow root
     
-    let article = document.createElement('article') // A2: create article element
+    let article = document.createElement('article'); // A2: create article element
     
     let style = document.createElement('style');  //A3: create a style element
     style.textContent = ` //A4: copy and pasted styles from cardTemplate.html
@@ -137,11 +137,11 @@ class RecipeCard extends HTMLElement {
     <div class="rating">
       <span>${data.rating}</span>
       <img src="/assets/images/icons/${data.rating}-star.svg" alt="${data.rating} stars">
-      <span>(500)</span>
+      <span>(${data.numRatings})</span>
     </div>
     <time>${data.lengthTime}</time>
     <p class="ingredients">
-      ${data.ingrediants}
+      ${data.ingredients}
     </p>`;
     // A6. TODO - Select the <article> we added to the Shadow DOM in the constructor
     // A7. TODO - Set the contents of the <article> with the <article> template given in
